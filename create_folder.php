@@ -2,23 +2,44 @@
 $date = date("Y m d");
 $folder_order = 1;
 $send_order = false;
+chdir("admin");
+$to = file_get_contents('emailsender.txt');
+chdir("..");
 if (isset ($_POST["send-order"])) {
 
     $send_order = $_POST['send-order'];
-    if ($_POST['user'] != "") $user = $_POST['user'];
-    else $user = "Имя пользователя не задано";
-    if ($_POST['email'] != "") {
-        $email = $_POST['email'];
-        if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", $email)) {
-            $infoEmail = "Email адрес указан не корректно";
-        }
-    }else $email = "Email не задан";
-    if ($_POST['question'] != "") $question = $_POST['question'];
-    else $question = "Вопрос не задан";
+    $question = htmlspecialchars($_POST['question']);
+    $email = $_POST['email'];
+    $user = htmlspecialchars($_POST['user']);
+    if ($question == "") {
+        $error = 3;
+    } elseif (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", $email)) {
+        $error = 1;
+    } elseif ($user =="") {
+        $error = 2;
+    }else  $error = 0;
+
 } else $send_order = null;
 
 
-if ($send_order) {
+switch ($error) {
+
+    case 1:
+        $emailError = "Email введен на верно";
+        break;
+    case 2:
+        $nameError = "Имя не введено ";
+        break;
+    case 3:
+        $questionError = "Вопрос не введен";
+        break;
+    default: break;
+
+}
+
+if ($error == 0 && $send_order == true) {
+
+
     chdir('orders');
 
     if (file_exists($folder_order)) {
@@ -49,12 +70,12 @@ if ($send_order) {
     //Вносим данные юзера
     $file = fopen('data_user.txt', "a");
 
-    $string = $file_order . "\n" . $user . "\n" . $email . "\n" . $question . "\n";
+    $string = $folder_order . "\n" . $user . "\n" . $email . "\n" . $question . "\n";
 
     file_put_contents("data_user.txt", $string);
 
 
     chdir('/../..');
-
+    require_once("admin/sendmailer.php");
 }
 //fclose($file);

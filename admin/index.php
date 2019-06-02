@@ -12,27 +12,14 @@ if(isset($_POST['startDelete'])){
   $deleteQuestion = $_POST['deleteQuestion'];
   chdir('../orders');
   remove_dir($deleteQuestion);
- // chdir('..');
+
+
 }
-//if(isset($_POST['register'])){
-//    if(isset($_POST['login']) && isset($_POST['password'])){
-//        $login = $_POST['login'];
-//        $password = $_POST['password'];
-//        if($login != 'admin' && $password != '123'){
-//            header('Location:http://form-send-file/index.php');
-//            exit;
-//
-//        }
-//
-//    }else {
-//        header('Location:http://form-send-file/index.php');
-//        exit;
-//    };
-//    if(isset($_POST['email'])) $email= $_POST['email'];
-//    else $email = "Email не задан";
-//    if(isset($_POST['question']))$question= $_POST['question'];
-//    else $question = "Вопрос не задан";
-//} else $send_order = null;
+if(isset($_POST['changemail'])) {
+    $newemail = $_POST['emailsender'];
+    $fileemailsender = fopen('emailsender.txt', "a+");
+    file_put_contents("emailsender.txt", $newemail);
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -124,7 +111,7 @@ if(isset($_POST['startDelete'])){
 
                                    chdir("..");
 
-                                    //echo "$file\n";
+
                                 }
                             }
                             closedir($handle);
@@ -136,12 +123,30 @@ if(isset($_POST['startDelete'])){
                     </div>
                 </div>
 
-
             </div>
 
+            <div class="row text-center"><h5>Отправка уведомлений на почту администартора</h5></div>
+            <div class="row changeEmail">
 
+                <div class="col-lg-4 ">
+                Отправка уведомлений производится на адрес: <?php
+                    chdir('../admin');
+                    $to = file_get_contents('emailsender.txt');
+                    echo "<b>$to</b>";
+                    chdir('..');?>
+                </div>
+                <div class="col-lg8">
+                    <form action="index.php" method="post">
+                    <input type="text" name="emailsender">
+                    <input type="submit" name="changemail" value="Поменять email">
+                    </form>
+                </div>
+
+            </div>
         </div>
+
     </div>
+
 
 
 </div>

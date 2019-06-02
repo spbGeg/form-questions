@@ -6,7 +6,7 @@ body{
 #main{
 
     background-color: #fff;
-    min-height: 800px;
+    min-height: 1000px;
 }
 h1{
     text-align:center;
@@ -15,7 +15,7 @@ h1{
 .registration{
     border-right: 1px solid #ccc;
     padding: 10px 10px;
-    min-height: 600px;
+    min-height: 800px;
 }
 
 .registration h3{
@@ -88,4 +88,24 @@ td, th{
 }
 table{
     width: 100%;
+    margin-bottom: 50px;
+}
+.form-order span{
+    color: #ff0000;
+    font-size: 10px;
+}
+#errorForm{
+    color: #ff0000;
+    font-size: 10px;
+}
+.changeEmail{
+    margin-top: 50px;
+}
+h5{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto;
+}
+.changeEmail form{
+    padding-top: 10px;
 }
