@@ -74,7 +74,7 @@
                         <div class='row'>
                             <div class='col-lg-12 text-right'>
                                 <input type='hidden' value=''>
-                                <input class='btn-info' type='submit' value='Отправить' name='send-order'>
+                                <input class='btn-info ' type='submit' value='Отправить' name='send-order'>
                             </div>
                         </div>
 

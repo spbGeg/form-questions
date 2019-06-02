@@ -1,5 +1,19 @@
 <?php
-
+function remove_dir($dir)
+{
+    if ($objs = glob($dir . '/*')) {
+        foreach($objs as $obj) {
+            is_dir($obj) ? remove_dir($obj) : unlink($obj);
+        }
+    }
+    rmdir($dir);
+}
+if(isset($_POST['startDelete'])){
+  $deleteQuestion = $_POST['deleteQuestion'];
+  chdir('../orders');
+  remove_dir($deleteQuestion);
+ // chdir('..');
+}
 //if(isset($_POST['register'])){
 //    if(isset($_POST['login']) && isset($_POST['password'])){
 //        $login = $_POST['login'];
@@ -81,7 +95,7 @@
                             <th style="width:20%">Имя пользователя</th>
                             <th style="width:20%">Email</th>
                             <th>Вопрос</th>
-                            <th style="width:20%">Удалить вопрос</th>
+                            <th style="width:10%">Удалить вопрос</th>
                         </tr>
 
                         <?php
@@ -95,7 +109,17 @@
                                    $userData = array();
                                     $userData = file("data_user.txt");
                                     //print_r( $userData);
-                                    echo"<tr><td>" . $file . "</td><td>" . $userData[1] . "</td><td><a href='mailto:" . $userData[2] ."'>". $userData[2] . "</a></td><td>" . $userData[3] . "</td><td></td></tr>";
+                                    echo"<tr><td>" . $file . "</td><td>" . $userData[1] . "</td><td><a href='mailto:" . $userData[2] ."'>". $userData[2] . "</a></td><td>" . $userData[3] . "</td>
+
+
+                                    <td>
+                                    <form action='index.php' method='post'>
+                                    <input type='hidden' value='$file' name='deleteQuestion'>
+                                    <input class='btn-danger' type='submit' name='startDelete' value='Удалить'>
+                                     </form>
+                                    
+                                    
+                                    </td></tr>";
 
 
                                    chdir("..");
