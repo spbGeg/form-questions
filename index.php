@@ -9,7 +9,8 @@ require_once "create_folder.php";
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<meta name="description"
           content="На нашем сайте вы всегда можете отправить заявку и мы свяжемся с вами в течении 5 минут">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -38,9 +39,9 @@ require_once "create_folder.php";
 
         </div>
 
-        <div class="col-lg-9 ">
+        <div class="col-lg-9 main-content">
             <h1>Задать вопрос</h1>
-            <div class="container main-content">
+            <div class="container ">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p>На данной странице вы можете задать свой вопрос и прикрепить файлы
@@ -82,7 +83,7 @@ require_once "create_folder.php";
 
 
                     </form>'";
-            }else echo "<h3>Вопрос $statusUploadFile успешно отправлен</h3>";?>
+            }else echo "<h3>$statusUploadFile</h3>";?>
 
 
 

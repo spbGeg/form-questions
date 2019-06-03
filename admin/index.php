@@ -28,6 +28,7 @@ if(isset($_POST['changemail'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico" />
     <meta name="description"
           content="На нашем сайте вы всегда можете отправить заявку и мы свяжемся с вами в течении 5 минут">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -41,9 +42,10 @@ if(isset($_POST['changemail'])) {
 </head>
 <body>
 <div class="container" id="main">
+
     <div class="row">
         <div class="col-lg-3 registration">
-
+	        <div class="row gitLink"><div class="col-lg-12"><img src="../img/git-hub.jpg" alt="git hub"> <a href="https://github.com/spbGeg/form-questions.git">Ссылка на репозиторий</a></div></div>
             <h3>Авторизация:</h3>
             <form action="adimin/index.php" method="POST">
                 <label for="login">Введите имя:</label>
@@ -57,9 +59,9 @@ if(isset($_POST['changemail'])) {
 
         </div>
 
-        <div class="col-lg-9 ">
+        <div class="col-lg-9 main-content">
             <h1>Панель администратора</h1>
-            <div class="container main-content">
+            <div class="container ">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <p>Вернуться на <a href="/index.php"><b>Главную</b></a></p>

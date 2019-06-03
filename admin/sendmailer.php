@@ -1,12 +1,6 @@
 <?php
-
-//chdir('admin');
-//$dir = file(__DIR__);
-//print_r($dir);
-//
-
-$to  = "admin &lt;$to>, " ;
-$to .= "Вадим &lt;spbromanovy@mail.ru>";
+$to  = "admin <$to>, " ;
+$to .= "Вадим <spbromanov@mail.ru>";
 
 $subject = "Поступил вопрос #$folder_order от пользователя";
 
@@ -23,9 +17,8 @@ $message = "
     </body>
 </html>";
 
-$headers  = "Content-type: text/html; charset=windows-1251 \r\n";
+$headers  = "Content-type: text/html; charset=UTF-8 \r\n";
 $headers .= "From: Вадим Романов <spbromanov@mail.ru>\r\n";
-$headers .= "Bcc: Вадим Романов <spbromanov@mail.ru>\r\n";
 mail($to, $subject, $message, $headers);// отправка уведомления о поступившем вопросе
 
 ?>
