@@ -57,13 +57,20 @@ if ($error == 0 && $send_order == true) {
 
     }
     chdir($folder_order);
+//Вносим данные юзера
+    $file = fopen('data_user.txt', "a");
 
+    $string = $folder_order . "\n" . $user . "\n" . $email . "\n" . $question . "\n";
+
+    file_put_contents("data_user.txt", $string);
 
     // Прикрепляем файлы
     if ($_FILES['userFile']['error'] == UPLOAD_ERR_OK && $_FILES['userFile']['type'] == 'image/jpeg') { // Проверяем на наличие ошибок
         $destiation_dir = dirname(".") . '/' . $_FILES['userFile']['name']; // Директория для размещения файла
         move_uploaded_file($_FILES['userFile']['tmp_name'], $destiation_dir); // Перемещаем файл в желаемую директорию
         $statusUploadFile = ' Вопрос c загруженным файлом отправлен'; // Оповещаем пользователя об успешной загрузке файла
+
+
     } else {
         $statusUploadFile = ' Вопрос отправлен'; // Оповещаем пользователя о том, что файл не был загружен
         switch ($_FILES['userFile']['error']) {
@@ -78,12 +85,7 @@ if ($error == 0 && $send_order == true) {
                 $statusUploadFile = " <i style='color:#ff0000;'>Вопрос отправлен, приложенный файл передать не удалось<br/> загрузите картинку в формате jpg и повторите отправку</i>";
 
         }
-        //Вносим данные юзера
-        $file = fopen('data_user.txt', "a");
 
-        $string = $folder_order . "\n" . $user . "\n" . $email . "\n" . $question . "\n";
-
-        file_put_contents("data_user.txt", $string);
 
 
         chdir('/../..');
@@ -91,4 +93,3 @@ if ($error == 0 && $send_order == true) {
     }
 }
 
-?>

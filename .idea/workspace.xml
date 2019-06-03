@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e62b01e-8569-4507-b507-6ca013f614ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/1/data_user.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/emailsender.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin/emailsender.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/sendmailer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/sendmailer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/create_folder.php" beforeDir="false" afterPath="$PROJECT_DIR$/create_folder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/1/5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/orders/1/data_user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/orders/1/data_user.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/10/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/11/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/12/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/2/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/3/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/4/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/5/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/6/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/7/data_user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/orders/8/data_user.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +21,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="54" column="42" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="42" />
+            <state relative-caret-position="170">
+              <caret line="32" column="150" selection-start-line="32" selection-start-column="150" selection-end-line="32" selection-end-column="150" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create_folder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="1615">
+              <caret line="95" selection-start-line="95" selection-end-line="95" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -57,8 +46,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+            <state relative-caret-position="357">
+              <caret line="113" column="109" selection-start-line="113" selection-start-column="109" selection-end-line="113" selection-end-column="109" />
+              <folding>
+                <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#5;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="99" selection-start-line="99" selection-end-line="99" />
+            <state relative-caret-position="374">
+              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -121,10 +116,10 @@
         <option value="$PROJECT_DIR$/admin/getadresssender.php" />
         <option value="$PROJECT_DIR$/admin/getemail.php" />
         <option value="$PROJECT_DIR$/admin/sendmailer.php" />
-        <option value="$PROJECT_DIR$/admin/index.php" />
+        <option value="$PROJECT_DIR$/create_folder.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/create_folder.php" />
+        <option value="$PROJECT_DIR$/admin/index.php" />
       </list>
     </option>
   </component>
@@ -204,7 +199,7 @@
       <workItem from="1559360553485" duration="276000" />
       <workItem from="1559362082792" duration="45665000" />
       <workItem from="1559541686838" duration="472000" />
-      <workItem from="1559542185717" duration="6071000" />
+      <workItem from="1559542185717" duration="16665000" />
     </task>
     <task id="LOCAL-00001" summary="delete file success">
       <created>1559480377769</created>
@@ -213,14 +208,22 @@
       <option name="project" value="LOCAL" />
       <updated>1559480377769</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Ander fun download files">
+      <created>1559548694541</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559548694542</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53681000" />
+    <option name="totallyTimeSpent" value="64275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17880085" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -234,7 +237,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32993197" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32993197" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="12" />
@@ -249,7 +252,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="delete file success" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete file success" />
+    <MESSAGE value="Ander fun download files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ander fun download files" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/orders/1/data_user.txt">
@@ -263,24 +267,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="99" selection-start-line="99" selection-end-line="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/create_folder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+        <state relative-caret-position="1615">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
           <folding>
             <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
@@ -288,10 +278,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="32" column="150" selection-start-line="32" selection-start-column="150" selection-end-line="32" selection-end-column="150" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="357">
+          <caret line="113" column="109" selection-start-line="113" selection-start-column="109" selection-end-line="113" selection-end-column="109" />
+          <folding>
+            <element signature="n#style#0;n#th#2;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

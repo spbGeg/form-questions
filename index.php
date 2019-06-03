@@ -1,4 +1,7 @@
 <?php
+session_start();
+if(isset($_SESSION['registratonsuccess']))if($_SESSION['registratonsuccess'] = 'yes') $registration_success = "yes";
+if(isset($_POST['logout'])) unset($_SESSION['registratonsuccess']);
 require_once "create_folder.php";
 
 ?>
@@ -26,8 +29,11 @@ require_once "create_folder.php";
     <div class="row">
         <div class="col-lg-3 registration">
 
-            <h3>Авторизация:</h3>
-            <form action="admin/index.php" method="POST">
+	        <h3>Авторизация:</h3>
+            <?php if($registration_success == "yes")echo"<a href='/admin/index.php'>Перейти в панель администратора</a><div style='text-align: center;'>Вы зарегистрировались как администратор</div>";?>
+            <form  <?php if($registration_success == "yes")echo"style='display: none;'";?>
+		            action="admin/index.php" method="POST">
+	            <p>Для перехода в админ панель пройдите авторизацию</p>
                 <label for="login">Введите имя:</label>
                 <input type="text" name="login">
                 <label for="password">Введите пароль:</label>
@@ -36,7 +42,14 @@ require_once "create_folder.php";
 
             </form>
 
+	        <form  <?php if($registration_success != "yes") echo"style='display: none;'";?>
+			        action="index.php" method="POST">
+		        <input class="btn-danger" type="submit" value="Выйти" name="logout">
+	        </form>
 
+
+		<?php
+			if(isset($_GET['registraionInfo']))if($_GET['registraionInfo'] =="nopass")echo "<p><span>Проверьте имя пользователя и/или пароль</span></p>";?>
         </div>
 
         <div class="col-lg-9 main-content">
