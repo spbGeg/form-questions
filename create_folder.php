@@ -89,7 +89,8 @@ if ($error == 0 && $send_order == true) {
 
 
         chdir('/../..');
-        require_once("admin/sendmailer.php");
+        require_once "admin/sendmailer.php";
+
     }
 }
 
