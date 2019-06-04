@@ -69,14 +69,14 @@ if ($error == 0 && $send_order == true) {
         $destiation_dir = dirname(".") . '/' . $_FILES['userFile']['name']; // Директория для размещения файла
         move_uploaded_file($_FILES['userFile']['tmp_name'], $destiation_dir); // Перемещаем файл в желаемую директорию
         $statusUploadFile = ' Вопрос c загруженным файлом отправлен'; // Оповещаем пользователя об успешной загрузке файла
-
+       // smtpmail("$to", "$subject", "$message", "$headers");
 
     } else {
         $statusUploadFile = ' Вопрос отправлен'; // Оповещаем пользователя о том, что файл не был загружен
         switch ($_FILES['userFile']['error']) {
             case UPLOAD_ERR_FORM_SIZE:
             case UPLOAD_ERR_INI_SIZE:
-            $statusUploadFile = "<i style='color:#ff0000;'> Вопрос отправлен, приложенные файлы передать не удалосьш, размер файла превышен </i>";
+            $statusUploadFile = "<i style='color:#ff0000;'> Вопрос отправлен, приложенные файлы передать не удалось, размер файла превышен </i>";
                 brake;
             case UPLOAD_ERR_NO_FILE:
                 $statusUploadFile = ' Вопрос отправлен';
@@ -89,8 +89,9 @@ if ($error == 0 && $send_order == true) {
 
 
         chdir('/../..');
-        require_once "admin/sendmailer.php";
+
 
     }
+    require_once "admin/sendmailer.php";
 }
 

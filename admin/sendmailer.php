@@ -67,18 +67,6 @@ body
 //$headers .= 'Content-type: text/html; charset="windows-1251"' . "\r\n";
 //$headers .= 'From: info@grillux.kz'. "\r\n";
 
-
-
-
-
-
-
-
-
-
-
-
-
 function smtpmail($mail_to, $subject, $message, $headers = '')
 {
     global $config;
