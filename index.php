@@ -71,21 +71,21 @@ require_once "create_folder.php";
                     <form action='index.php' method='POST' enctype='multipart/form-data'>
                         <div class='row'>
                             <div class='col-lg-6 text-center'><label for='question'>Введите вопрос:<br/><span class='errorForm'>$questionError</span></label></div>
-                            <div class='col-lg-6'><textarea name='question' >$question</textarea></div>
+                            <div class='col-lg-6'><textarea name='question' id='question' >$question</textarea></div>
                         </div>
 
                         <div class='row'>
                             <div class='col-lg-6 text-center'><label for='user'>Введите имя:<br/><span class='errorForm' >$nameError</span></label></div>
-                            <div class='col-lg-6'><input type='text' name='user' value='$user'></div>
+                            <div class='col-lg-6'><input type='text' name='user' value='$user' id='user'></div>
                         </div>
                         <div class='row'>
                             <div class='col-lg-6 text-center'><label for='email'>Введите email:<br/><span class='errorForm' >$emailError</span></label></div>
-                            <div class='col-lg-6 text-left'><input type='text' name='email' value='$email'></div>
+                            <div class='col-lg-6 text-left'><input type='text' name='email' value='$email' id='email'></div>
                         </div>
                         <div class='row'>
                           <input type='hidden' name='MAX_FILE_SIZE' value='3000000'>
-                            <div class='col-lg-6 text-center'><label for='userFile'>Прикрепить файл:</label></div>
-                            <div class='col-lg-6 text-left'><input type='file' name='userFile'></div>
+                            <div class='col-lg-6 text-center'><label for='userFile'>Прикрепить файл <br/> (в формате jpg):</label></div>
+                            <div class='col-lg-6 text-left'><input type='file' name='userFile' id='userFile'></div>
                         </div>
 
                         <div class='row'>

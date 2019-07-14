@@ -1,13 +1,15 @@
 <?php
 session_start();
+$site = $_SERVER['SERVER_NAME'];
+define("SITE_PATH", "$site");
 if(isset($_POST['register'])){
     if($_POST['login'] != "admin" && $_POST['password'] != "123"){
-        header("Location: http://form-questions/index.php?registraionInfo=nopass");
+        header("Location: http://".SITE_PATH."/index.php?registraionInfo=nopass");
 
 
     }else $_SESSION['registratonsuccess'] = 'yes';
 }
-if($_SESSION['registratonsuccess'] != "yes")  header("Location: http://form-questions/index.php?registraionInfo=nopass");
+if($_SESSION['registratonsuccess'] != "yes")  header("Location: http://".SITE_PATH."/index.php?registraionInfo=nopass");
 
 if(isset($_POST['logout'])) unset($_SESSION['registratonsuccess']);
 function remove_dir($dir)
@@ -63,6 +65,7 @@ if (isset($_POST['changemail'])) {
 			</div>
 			<h3>Авторизация:</h3>
 			<form action="index.php" method="POST">
+                <p>Вы зарегистрированы как Администратор</p>
 			<input class="btn-danger" type="submit" value="Выйти" name="logout">
 			</form>
 
@@ -109,7 +112,7 @@ if (isset($_POST['changemail'])) {
                                         //вытаскиваем приложенный файл
                                         $path = array();
                                         $path = scandir(".");
-                                        $pathFile = $path[3];
+                                        $pathFile = $path[2];
                                         if($pathFile != ""){
                                         	$userFile = "<a href=\"../orders/$file/$pathFile\" target='_blank' ><img style='width:50px;' src='../img/file-jpg.png'></a> ";
                                         }
